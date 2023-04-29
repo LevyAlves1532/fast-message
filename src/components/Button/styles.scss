@@ -16,6 +16,11 @@
 
     position: relative;
     z-index: 1;
+
+    @include responsive($mbB) {
+      font-size: 4vw;
+      line-height: 4.5vw;
+    }
   }
 
   .animation-point {

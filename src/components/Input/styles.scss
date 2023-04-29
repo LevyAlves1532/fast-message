@@ -41,11 +41,21 @@
   span {
     @include font(1.5rem, 200);
     transition: all ease 0.5s;
+
+    @include responsive($mbB) {
+      font-size: 4vw;
+      line-height: 4.5vw;
+    }
   }
 
   input {
     padding: 10px 0;
     border-bottom: 1px solid #000;
     transition: all ease 0.5s;
+
+    @include responsive($mbB) {
+      font-size: 3vw;
+      line-height: 3.5vw;
+    }
   }
 }
