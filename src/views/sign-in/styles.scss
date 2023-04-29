@@ -1,0 +1,81 @@
+.SignInView {
+  min-height: 100vh;
+  background-color: $first_light;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    max-width: 768px;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+
+    &--banner {
+      flex: 1;
+
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .SignInBlockedImage {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--form {
+      flex: 1;
+      padding: 40px 20px;
+
+      .SignInTitle {
+        margin-bottom: 10px;
+        text-align: center;
+
+        h1 {
+          @include font(2.5rem, 400, $first_dark);
+        }
+      }
+
+      .SignInText {
+        max-width: 75%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+
+        p {
+          @include font(1.3rem, 400, $first, 1.8rem);
+        }
+      }
+
+      .SignInRegister {
+        text-align: center;
+
+        p {
+          @include font(1.3rem, 400, #999);
+
+          a {
+            @include font(1.3rem, 400, $second);
+            transition: all ease 0.5s;
+
+            &:hover {
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

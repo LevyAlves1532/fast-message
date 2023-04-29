@@ -1,0 +1,45 @@
+.Button {
+  padding: 13px 18px;
+  background: linear-gradient(-40deg, $second_light, $first_light, $second_light);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  p {
+    letter-spacing: 1px;
+    @include font(1.5rem, 400, #FFF);
+    transition: all ease 0.5s;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .animation-point {
+    width: 10px;
+    height: 100%;
+    background-color: $second_light;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all ease 0.5s;
+
+    position: absolute;
+    left: 0;
+  }
+
+  &:hover {
+    p {
+      letter-spacing: 3px;
+    }
+
+    .animation-point {
+      width: 100%;
+      border-radius: 0;
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}

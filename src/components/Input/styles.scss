@@ -1,0 +1,51 @@
+.InputLabel {
+  display: flex;
+  flex-direction: column;
+  transition: all ease 0.5s;
+  cursor: text;
+
+  &.info-input {
+    span {
+      color: #66F;
+    }
+
+    input {
+      border-color: #66F;
+      color: #66F;
+    }
+  }
+
+  &.danger-input {
+    span {
+      color: #F66;
+    }
+
+    input {
+      border-color: #F66;
+      color: #F66;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    span {
+      color: $second;
+    }
+
+    input {
+      border-color: $second;
+      color: $second;
+    }
+  }
+
+  span {
+    @include font(1.5rem, 200);
+    transition: all ease 0.5s;
+  }
+
+  input {
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+    transition: all ease 0.5s;
+  }
+}

@@ -1,0 +1,21 @@
+// FONTs
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// VARIABLEs
+@import "./includes/colors.scss";
+@import "./includes/sizes.scss";
+@import "./includes/func.scss";
+
+// APPLICATION THEME
+@import "./theme.scss";
+
+// COMPONENTs
+@import "../../components/Input/styles.scss";
+@import "../../components/Button/styles.scss";
+
+// VIEWs
+@import "../../views/sign-in/styles.scss";
+@import "../../views/sign-up/styles.scss";
+
+// FORMs
+@import "../../forms/sign-in/login/styles.scss";

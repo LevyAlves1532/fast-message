@@ -1,0 +1,12 @@
+@mixin responsive($target) {
+  @media #{$target} {
+    @content;
+  }
+}
+
+@mixin font($fontSize, $fontWeight, $color: #000, $lineHeight: calc(#{$fontSize} + 0.2rem)) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $color;
+  line-height: $lineHeight;
+}
