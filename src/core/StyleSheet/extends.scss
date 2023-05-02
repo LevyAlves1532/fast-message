@@ -12,10 +12,17 @@
 // COMPONENTs
 @import "../../components/Input/styles.scss";
 @import "../../components/Button/styles.scss";
+@import "../../components/CardNotify/styles.scss";
 
 // VIEWs
 @import "../../views/sign-in/styles.scss";
 @import "../../views/sign-up/styles.scss";
+@import "../../views/home/styles.scss";
 
 // FORMs
 @import "../../forms/sign-in/login/styles.scss";
+
+// CONTAINERs
+@import "../../containers/template/Header/styles.scss";
+@import "../../containers/template/Notification/styles.scss";
+@import "../../containers/home/Posts/styles.scss";

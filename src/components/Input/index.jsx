@@ -7,6 +7,8 @@ export default props => {
   if (props.info) globalClass += " info-input";
   if (props.success) globalClass += " success-input";
 
+  if (props.color && props.color === "white") globalClass += " white-input";
+
   switch(props.type) {
     default:
       let inputLabelClass = "InputLabel";
@@ -15,7 +17,9 @@ export default props => {
 
       return (
         <label className={inputLabelClass} style={props.style}>
-          <span>{props.label}</span>
+          { props.label &&
+            <span>{props.label}</span>
+          }
           <input 
             type={props.type || "text"} 
             placeholder={props.placeholder}

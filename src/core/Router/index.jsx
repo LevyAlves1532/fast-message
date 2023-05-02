@@ -4,6 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // VIEWs
 import SignIn from "../../views/sign-in";
 import SignUp from "../../views/sign-up";
+import Home from "../../views/home";
+
+// COMPONENTs
+import Auth from "../../components/Auth";
 
 // CONFIG
 import config from "../config/config";
@@ -20,7 +24,7 @@ export default props => {
         <Route path="/sign-up" element={<SignUp />} />
         
         {/* PRIVATE ROUTEs */}
-        <Route path="/" element={<h1>Hello World</h1>} />
+        <Route path="/" element={<Auth component={<Home />} />} />
       </Routes>
     </BrowserRouter>
   )

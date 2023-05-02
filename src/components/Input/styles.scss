@@ -12,6 +12,10 @@
     input {
       border-color: #66F;
       color: #66F;
+
+      &::placeholder {
+        color: #66F;
+      }
     }
   }
 
@@ -23,6 +27,25 @@
     input {
       border-color: #F66;
       color: #F66;
+
+      &::placeholder {
+        color: #F66;
+      }
+    }
+  }
+
+  &.success-input {
+    span {
+      color: #6F6;
+    }
+
+    input {
+      border-color: #6F6;
+      color: #6F6;
+
+      &::placeholder {
+        color: #6F6;
+      }
     }
   }
 
@@ -35,6 +58,41 @@
     input {
       border-color: $second;
       color: $second;
+
+      &::placeholder {
+        color: $second;
+      }
+    }
+  }
+
+  &.white-input {
+    span {
+      color: #FFF
+    } 
+
+    input {
+      border-color: #FFF;
+      color: #FFF;
+
+      &::placeholder {
+        color: #FFF;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      span {
+        color: $fourth;
+      }
+
+      input {
+        border-color: $fourth;
+        color: $fourth;
+
+        &::placeholder {
+          color: $fourth;
+        }
+      }
     }
   }
 
@@ -52,6 +110,11 @@
     padding: 10px 0;
     border-bottom: 1px solid #000;
     transition: all ease 0.5s;
+
+    &::placeholder {
+      color: #000;
+      transition: all ease 0.5s;
+    }
 
     @include responsive($mbB) {
       font-size: 3vw;

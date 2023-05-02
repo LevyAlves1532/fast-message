@@ -1,0 +1,113 @@
+.CardNotify {
+  padding: 15px 20px;
+  transition: all ease 0.5s;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &:hover {
+    background-color: #F6F6F6;
+  }
+
+  &.card-notify-danger {
+    .CardNotify__icon {
+      color: #F66;
+    }
+
+    .CardNotify__details {
+      &--title {
+        p {
+          color: #F66;
+        }
+      }
+    }
+  }
+
+  &.card-notify-warn {
+    .CardNotify__icon {
+      color: #DA4;
+    }
+
+    .CardNotify__details {
+      &--title {
+        p {
+          color: #DA4;
+        }
+      }
+    }
+  }
+
+  &.card-notify-info {
+    .CardNotify__icon {
+      color: #66F;
+    }
+
+    .CardNotify__details {
+      &--title {
+        p {
+          color: #66F;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 24px;
+    color: $second;
+
+    @include responsive($mbB) {
+      font-size: 7vw;
+    }
+  }
+
+  &__details {
+    flex: 1;
+
+    &--title {
+      margin-bottom: 5px;
+
+      p {
+        @include font(12px, 400, $second);
+        cursor: default !important;
+
+        @include responsive($mbB) {
+          font-size: 3vw;
+          line-height: 3.5vw;
+        }
+      }
+    }
+
+    &--date {
+      p {
+        @include font(10px, 400, #999);
+        cursor: default !important;
+
+        @include responsive($mbB) {
+          font-size: 2vw;
+          line-height: 2.5vw;
+        }
+      }
+    }
+  }
+
+  &__del {
+    margin-left: 10px;
+
+    span {
+      color: #F66;
+      transition: all ease 0.5s;
+      cursor: pointer;
+
+      display: block;
+
+      @include responsive($mbB) {
+        font-size: 5vw;
+      }
+
+      &:hover {
+        animation: move-x normal ease 0.5s;
+      }
+    }
+  }
+}
