@@ -1,0 +1,11 @@
+.HomePosts {
+  width: calc(75% - 10px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include responsive($tb) {
+    width: 100%;
+  }
+}

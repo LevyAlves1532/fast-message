@@ -9,10 +9,10 @@ export default props => {
   
   if (logged) {
     return (
-      <>
+      <div style={{ paddingTop: window.screen.width > 768 ? 81 : 119 }}>
         <Header />
         {props.component}
-      </>
+      </div>
     );
   } else {
     return <Navigate to="/sign-in" />

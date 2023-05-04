@@ -1,0 +1,17 @@
+.HomeView {
+  padding: 40px 0;
+
+  &__container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    gap: 20px;
+
+    @include responsive($tb) {
+      flex-direction: column;
+    }
+  }
+}

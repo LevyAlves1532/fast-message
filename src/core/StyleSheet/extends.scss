@@ -13,6 +13,7 @@
 @import "../../components/Input/styles.scss";
 @import "../../components/Button/styles.scss";
 @import "../../components/CardNotify/styles.scss";
+@import "../../components/Post/styles.scss";
 
 // VIEWs
 @import "../../views/sign-in/styles.scss";
@@ -21,8 +22,11 @@
 
 // FORMs
 @import "../../forms/sign-in/login/styles.scss";
+@import "../../forms/home/sendMessage/styles.scss";
 
 // CONTAINERs
 @import "../../containers/template/Header/styles.scss";
 @import "../../containers/template/Notification/styles.scss";
 @import "../../containers/home/Posts/styles.scss";
+@import "../../containers/home/More/styles.scss";
+@import "../../containers/home/Comments/styles.scss";

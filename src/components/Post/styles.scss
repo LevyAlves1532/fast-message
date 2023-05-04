@@ -1,0 +1,232 @@
+.Post {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  background-color: #FFF;
+
+  &__header {
+    padding: 13px 20px;
+    background-color: $second_light;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--details {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+
+        @include responsive($mbB) {
+          width: 7vw;
+          height: 7vw;
+        }
+      }
+
+      a {
+        @include font(16px, 400, #FFF);
+
+        @include responsive($mbB) {
+          font-size: 4vw;
+          line-height: 4.5vw;
+        }
+      }
+    }
+  }
+
+  &__body {
+    width: 100%;
+    height: 40vw;
+    max-height: 410px;
+
+    display: flex;
+
+    @include responsive($tb) {
+      height: 55vw;
+    }
+
+    &.active-post-comments {
+      img {
+        width: 0;
+      }
+
+      .Post__body--comments {
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: all ease 0.5s;
+    }
+
+    &--comments {
+      width: 0;
+      height: 100%;
+      background-color: $first_light;
+      transition: all ease 0.5s;
+    }
+  }
+
+  &__footer {
+    display: flex;
+
+    &--liked,
+    &--comments {
+      height: 60px;
+      cursor: pointer;
+      overflow: hidden;
+
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+      z-index: 0;
+
+      button {
+        transition: all ease 0.5s;
+        pointer-events: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        z-index: -1;
+
+        span {
+          font-size: 24px;
+          transition: all ease 0.5s;
+
+          @include responsive($mbB) {
+            font-size: 6vw;
+          }
+        }
+      }
+    }
+
+    &--liked {
+      &.active-post-liked {
+        button {
+          width: 36vw;
+          height: 36vw;
+
+          @include responsive($tb) {
+            width: 49vw;
+            height: 49vw;
+          }
+
+          span {
+            color: #FFF;
+          }
+        }
+
+        &:hover {
+          button {
+            width: 0;
+            height: 0;
+  
+            span {
+              color: #F66;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        button {
+          width: 36vw;
+          height: 36vw;
+
+          @include responsive($tb) {
+            width: 49vw;
+            height: 49vw;
+          }
+
+          span {
+            color: #FFF;
+          }
+        }
+      }
+
+      button {
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #F66;
+
+        span {
+          color: #F66;
+        }
+      }
+    }
+
+    &--comments {
+      &.active-post-comments {
+        button {
+          width: 36vw;
+          height: 36vw;
+
+          @include responsive($tb) {
+            width: 49vw;
+            height: 49vw;
+          }
+
+          span {
+            color: #FFF;
+          }
+        }
+
+        &:hover {
+          button {
+            width: 0;
+            height: 0;
+  
+            span {
+              color: #66F;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        button {
+          width: 36vw;
+          height: 36vw;
+
+          @include responsive($tb) {
+            width: 49vw;
+            height: 49vw;
+          }
+
+          span {
+            color: #FFF;
+          }
+        }
+      }
+
+      button {
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #66F;
+
+        span {
+          color: #66F;
+        }
+      }
+    }
+  }
+}

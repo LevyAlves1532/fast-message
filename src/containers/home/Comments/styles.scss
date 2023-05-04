@@ -1,0 +1,54 @@
+.HomeComments {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  &__messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .HomeCommentsMessage {
+      max-width: calc(50% - 10px);
+
+      display: flex;
+      gap: 10px;
+
+      @include responsive($mbB) {
+        max-width: calc(75% - 10px);
+      }
+
+      &__image {
+        img {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      &__details {
+        p {
+          @include font(16px, 200, #FFF);
+          margin-bottom: 10px;
+        }
+
+        span {
+          padding: 10px;
+          border-radius: 5px;
+          background-color: rgba(0, 0, 0, 0.1);
+          @include font(14px, 400, #FFF);
+          letter-spacing: 1px;
+          
+          display: block;
+        }
+      }
+    }
+  }
+}
