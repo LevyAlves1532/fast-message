@@ -1,6 +1,4 @@
 export default props => {
-  console.log(props);
-
   return (
     <div className="HomeComments">
       <div className="HomeComments__messages">

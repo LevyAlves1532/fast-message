@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 // ICONs
 import { FaRegHeart, FaComment } from "react-icons/fa";
-import { MdWarning } from "react-icons/md";
 
 export default props => {
   let postLikedClass = "Post__footer--liked";

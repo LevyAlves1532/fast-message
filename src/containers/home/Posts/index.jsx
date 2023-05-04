@@ -22,11 +22,13 @@ export default props => {
 
   return (
     <section className="HomePosts">
+      {props.formElement}
       { 
         props.data.map((el, index) => (
           <Post 
             user={el.user}
             image={el.image}
+            text={el.text}
             liked={el.liked} 
             comments={(props.comments && props.comments.id === el.id) ? props.comments : null}
             onComment={() => togglePostComments(el)}

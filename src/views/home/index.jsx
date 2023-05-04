@@ -6,11 +6,13 @@ import Posts from "../../containers/home/Posts";
 import More from "../../containers/home/More";
 import Comments from "../../containers/home/Comments";
 import SendMessage from "../../forms/home/sendMessage";
+import SendPost from "../../forms/home/sendPost";
 
 const posts = [
   {
     id: Math.random(),
     image: "https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg",
+    text: "Esse mundo é incrível!",
     liked: false,
     user: {
       id: Math.random(),
@@ -35,6 +37,7 @@ const posts = [
   {
     id: Math.random(),
     image: "https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg",
+    text: "Esse mundo é incrível!",
     liked: true,
     user: {
       id: Math.random(),
@@ -93,6 +96,7 @@ function Home(props) {
           comments={postComments}
           onComment={setPostComments}
           commentElement={<Comments data={postComments}><SendMessage /></Comments>}
+          formElement={<SendPost />}
         />
         <More />
       </div>

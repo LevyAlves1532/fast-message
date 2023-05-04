@@ -1,7 +1,9 @@
-.Button {
+.Button,
+.ButtonMask {
   padding: 13px 18px;
   background: linear-gradient(-40deg, $second_light, $first_light, $second_light);
   overflow: hidden;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
